@@ -7876,6 +7876,13 @@ textarea.form-control-lg {
   padding: 3rem !important;
 }
 
+.p-20 {
+  padding: 20rem !important;
+  padding-bottom: 10rem !important;
+  padding-top: 5rem !important
+}
+
+
 .px-0 {
   padding-right: 0 !important;
   padding-left: 0 !important;
@@ -11731,4 +11738,24 @@ html {
     width: 1.5vw;
     left: -2vw;
   }
+
+}
+.profile {
+  width: 100%; /* Ajusta o tamanho para cerca de 90% do tamanho original */
+  max-width: 1000px; /* Defina o tamanho máximo, caso necessário */
+  height: 500px; /* Altura desejada para o contêiner */
+  margin-top: 0%;
+  margin-bottom: 100px;
+  overflow: hidden; /* Evita que a imagem ultrapasse o contêiner */
+  margin-left: auto; /* Ajusta o espaçamento à direita da imagem */
+}
+
+.profile .profile-img {
+  width: 80%; /* Ajusta a largura da imagem para ocupar toda a largura do contêiner */
+  height: 80%; /* Ajusta a altura da imagem para ocupar todo o espaço disponível */
+  margin-bottom: 50px;
+  border-radius: 10%;
+  max-width: 100%; /* Garante que a largura da imagem não ultrapasse a largura do contêiner pai */
+  max-height: 100%; /* Garante que a altura da imagem não ultrapasse a altura do contêiner pai */
+  object-fit: contain; /* Mantém a proporção da imagem e a ajusta dentro do contêiner */
 }
