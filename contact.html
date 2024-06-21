@@ -80,21 +80,12 @@
                                         <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
                                     </div>
                                     <!-- Submit success message-->
-                                    <!---->
-                                    <!-- This is what your users will see when the form-->
-                                    <!-- has successfully submitted-->
                                     <div class="d-none" id="submitSuccessMessage">
                                         <div class="text-center mb-3">
                                             <div class="fw-bolder">Form submission successful!</div>
-                                            To activate this form, sign up at
-                                            <br />
-                                            <!-- <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a> -->
                                         </div>
                                     </div>
                                     <!-- Submit error message-->
-                                    <!---->
-                                    <!-- This is what your users will see when there is-->
-                                    <!-- an error submitting the form-->
                                     <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Erro ao enviar mensagem!</div></div>
                                     <!-- Submit Button-->
                                     <div class="d-grid"><button class="btn btn-primary btn-lg" id="submitButton" type="submit">Enviar</button></div>
@@ -129,5 +120,37 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script>
+            document.getElementById('contactForm').addEventListener('submit', function(event) {
+                event.preventDefault(); // Impede o envio do formulário padrão
+            
+                var form = event.target;
+                var formData = new FormData(form);
+            
+                // Enviar dados do formulário usando fetch
+                fetch(form.action, {
+                    method: form.method,
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                }).then(function(response) {
+                    if (response.ok) {
+                        document.getElementById('submitSuccessMessage').classList.remove('d-none');
+                        document.getElementById('submitErrorMessage').classList.add('d-none');
+                        form.reset(); // Limpa o formulário
+                    } else {
+                        return response.json().then(function(data) {
+                            throw new Error(data.error || 'Erro ao enviar mensagem!');
+                        });
+                    }
+                }).catch(function(error) {
+                    document.getElementById('submitErrorMessage').textContent = error.message;
+                    document.getElementById('submitErrorMessage').classList.remove('d-none');
+                    document.getElementById('submitSuccessMessage').classList.add('d-none');
+                });
+            });
+            </script>
+            
     </body>
 </html>
