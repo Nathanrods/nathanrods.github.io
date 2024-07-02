@@ -656,6 +656,21 @@ progress {
     max-width: 960px;
   }
 }
+.card-body {
+    text-align: center; /* Centraliza o texto e conteúdo */
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 767px) {
+    .row-cols-1 {
+        flex-direction: column; /* Altera a direção das colunas para empilhamento */
+    }
+    .col {
+        margin-bottom: 20px; /* Espaçamento entre colunas em dispositivos móveis */
+    }
+}
+
+
 @media (min-width: 1200px) {
   .container-xl, .container-lg, .container-md, .container-sm, .container {
     max-width: 1140px;
