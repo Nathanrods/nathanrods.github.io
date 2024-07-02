@@ -11741,21 +11741,25 @@ html {
 
 }
 .profile {
-  width: 100%; /* Ajusta o tamanho para cerca de 90% do tamanho original */
-  max-width: 1000px; /* Defina o tamanho máximo, caso necessário */
-  height: 500px; /* Altura desejada para o contêiner */
-  margin-top: 0%;
+  width: 60%; /* Reduz a largura do contêiner para 60% do tamanho original */
+  max-width: 600px; /* Ajusta o tamanho máximo, caso necessário */
+  height: 300px; /* Reduz a altura do contêiner para 60% do tamanho original */
+  margin-top: 20%;
   margin-bottom: 100px;
   overflow: hidden; /* Evita que a imagem ultrapasse o contêiner */
   margin-left: auto; /* Ajusta o espaçamento à direita da imagem */
+  margin-right: auto; /* Centraliza o contêiner horizontalmente */
+  border-radius: 15%; /* Arredonda os cantos do contêiner */
+  background-color: #f0f0f0; /* Exemplo de cor de fundo, ajuste conforme necessário */
 }
 
 .profile .profile-img {
-  width: 80%; /* Ajusta a largura da imagem para ocupar toda a largura do contêiner */
-  height: 80%; /* Ajusta a altura da imagem para ocupar todo o espaço disponível */
-  margin-bottom: 50px;
-  border-radius: 10%;
+  width: 90%; /* Reduz a largura da imagem para 70% do tamanho original (80% * 0.70 = 56%) */
+  height: 90%; /* Reduz a altura da imagem para 70% do tamanho original (80% * 0.70 = 56%) */
+  margin-bottom: 15px;
+  border-radius: 15%;
   max-width: 100%; /* Garante que a largura da imagem não ultrapasse a largura do contêiner pai */
   max-height: 100%; /* Garante que a altura da imagem não ultrapasse a altura do contêiner pai */
   object-fit: contain; /* Mantém a proporção da imagem e a ajusta dentro do contêiner */
 }
+
