@@ -18,10 +18,10 @@ Este é o repositório do meu portfólio pessoal, onde demonstro minhas habilida
 
 ## Como Usar
 
-1. Clone este repositório: `git clone https://github.com/seu-usuario/seu-repositorio.git`
-2. Abra o arquivo `index.html` em seu navegador preferido.
+1. Clone este repositório: `git clone (https://github.com/Nathanrods/nathanrods.github.io.git)`
+2. Abra o arquivo `https://nathanrods.github.io/index.html` em seu navegador preferido.
 3. Explore o portfólio para conhecer mais sobre mim e meu trabalho.
 
 ## Contato
 
-Você pode me encontrar no [LinkedIn](https://www.linkedin.com/in/seu-perfil-linkedin/) para mais informações e outras formas de contato.
+Você pode me encontrar no [LinkedIn](https://www.linkedin.com/in/nathanrod-ads/) para mais informações e outras formas de contato.
