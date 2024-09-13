@@ -1,0 +1,481 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #181818;
+  color: #e5e5e5;
+}
+
+header {
+  background-color: #121212;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h1 {
+  color: #fff;
+  font-size: 24px;
+  margin-inline: 30px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  margin-inline-end: 50px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.intro h2 {
+  font-size: 48px;
+  color: #34d399;
+  margin: 40px;
+  text-align: center;
+}
+
+.bio-connect {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px;
+  height: 600px;
+}
+
+.bio-text {
+  flex: 1;
+  margin-right: 100px; /* Espaço entre o texto e a imagem */
+  margin-inline-start: 70px;
+}
+
+.bio-text h3 {
+  color: #34d399;
+  font-size: 50px;
+  margin-top: 0px;
+  margin-bottom: 0;
+}
+
+.bio-text p {
+  color: #fff;
+}
+
+.bio-text span {
+  color: #34d399;
+}
+
+
+/* Certifique-se de que o contêiner da imagem tem a posição relativa */
+.bio-image {
+  position: relative;
+  display: inline-block;
+}
+
+/* Estilo da imagem */
+.bio-image img {
+  width: 300px; /* Ajuste o tamanho da imagem conforme necessário */
+  border-radius: 10%; /* Ajusta o formato da imagem */
+  display: block; /* Remove espaços indesejados ao redor da imagem */
+  position: relative; /* Garante que a imagem não afete o posicionamento do pseudo-elemento */
+}
+
+/* Pseudo-elemento para a borda com efeito de degradê */
+.bio-image::before {
+  content: '';
+  position: absolute;
+  top: -20px; /* Ajusta a posição para criar a borda ao redor da imagem */
+  left: -20px;
+  width: calc(90% + 10px); /* Ajusta a largura para criar a borda ao redor da imagem */
+  height: calc(90% + 10px); /* Ajusta a altura para criar a borda ao redor da imagem */
+  border-radius: 10%; /* Ajusta o formato da borda para combinar com a imagem */
+  box-shadow: 
+    0 0 0 2px rgba(52, 211, 153, 1), /* Borda interna com menor espessura */
+    0 0 0 4px rgba(74, 222, 128, 1); /* Borda externa com menor espessura */
+  z-index: -1; /* Coloca o pseudo-elemento atrás da imagem */
+}
+
+
+
+
+.connect {
+  margin-left: 20px; /* Espaço entre o conteúdo da bio e a seção de conexão */
+  text-align: center;
+  margin-inline-end: 60px;
+}
+
+.connect h3 {
+  color: #34d399;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.connect ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.connect ul li a {
+  color: #34d399;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+/* Formação e Cursos */
+.education {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 40px;
+}
+
+.education h2 {
+  font-size: 36px;
+  color: #34d399;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.education .card {
+  background-color: #252525;
+  padding: 20px;
+  border-radius: 8px;
+  width: 30%;
+  margin-inline: 15px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.education .card h3 {
+  color: #34d399;
+  margin-bottom: 10px;
+}
+
+.education .card p {
+  color: #e5e5e5;
+}
+
+.education .card p.date {
+  color: rgba(229, 229, 229, 0.6); /* Meio transparente */
+  text-align: left; /* Texto não centralizado */
+  margin-top: 10px;
+}
+/* Seção de Contato */
+.contact {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.contact h2 {
+  text-align: center;
+  color: #333;
+}
+
+.contact form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact label {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.contact input, 
+.contact textarea {
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1em;
+  width: 100%;
+}
+
+.contact textarea {
+  resize: vertical;
+}
+
+.contact button {
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.contact button:hover {
+  background-color: #4cae4c;
+}
+
+/* Cards */
+.services {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px;
+}
+
+.services h2 {
+  font-size: 36px;
+  color: #34d399;
+  margin-bottom: 20px;
+}
+
+.card {
+  background-color: #252525;
+  padding: 20px;
+  border-radius: 8px;
+  margin-inline: 15px;
+  position: relative;
+}
+
+.card h3 {
+  color: #34d399;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #e5e5e5;
+}
+
+.card p.date {
+  color: rgba(229, 229, 229, 0.6); /* Meio transparente */
+  text-align: left; /* Texto não centralizado */
+  margin-top: 10px;
+  font-size: 10px;
+}
+
+.tech-icons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.tech-icons i {
+  font-size: 24px;
+  color: #34d399;
+  transition: color 0.3s ease;
+}
+
+.tech-icons i:hover {
+  color: #e5e5e5;
+}
+
+/* Seção de Habilidades Profissionais */
+.skills {
+  padding: 40px;
+  background-color: #1f1f1f;
+  text-align: center;
+}
+
+.skills h3 {
+  font-size: 36px;
+  color: #34d399;
+  margin-bottom: 20px;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.skills-group {
+  background-color: #252525;
+  padding: 20px;
+  border-radius: 8px;
+  width: calc(50% - 20px);
+  box-sizing: border-box;
+}
+
+.skills-group h4 {
+  color: #34d399;
+  margin-bottom: 10px;
+}
+
+.skills-group ul {
+  list-style: none;
+  padding: 0;
+  color: #e5e5e5;
+}
+
+.skills-group ul li {
+  margin: 5px 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .skills-group {
+    width: 100%;
+  }
+}
+
+/* Technologies Section */
+.technologies {
+  padding: 40px;
+  background-color: #1f1f1f;
+  text-align: center;
+}
+
+.technologies h2 {
+  font-size: 36px;
+  color: #34d399;
+  margin-bottom: 20px;
+}
+
+.tech-lang-container {
+  display: flex;
+  justify-content: center; /* Centraliza o grupo de tags */
+  flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte */
+  gap: 20px; /* Espaço entre as tags */
+  margin: 0 auto; /* Centraliza o container horizontalmente */
+  max-width: 800px; /* Largura máxima do container para manter o alinhamento */
+}
+
+.tech-lang-group {
+  width: 100%; /* Ocupa toda a largura disponível dentro do container */
+  max-width: 600px; /* Largura máxima de cada grupo */
+  box-sizing: border-box;
+}
+
+.tech-lang-group h3 {
+  color: #34d399;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.tech-lang-group ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap; /* Permite que as tags se movam para a linha seguinte */
+  gap: 10px; /* Espaço entre as tags */
+  justify-content: center; /* Centraliza as tags dentro do grupo */
+}
+
+.tech-lang-group ul li {
+  background-color: #252525;
+  color: #e5e5e5;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.tech-lang-group ul li i {
+  margin-right: 10px; /* Espaço entre o ícone e o texto */
+  color: #34d399; /* Cor dos ícones */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .tech-lang-container {
+    flex-direction: column; /* Empilha os grupos verticalmente em telas menores */
+    align-items: center; /* Centraliza os grupos horizontalmente */
+  }
+
+  .tech-lang-group {
+    width: 90%; /* Ajusta a largura dos grupos em telas menores */
+    max-width: none; /* Remove a largura máxima para telas menores */
+  }
+}
+
+/* Projects Section */
+.projects {
+  padding: 40px;
+  background-color: #121212;
+}
+
+.projects h3 {
+  font-size: 36px;
+  color: #34d399;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Container for project cards */
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Espaço entre os cards */
+  justify-content: center; /* Centraliza os cards na linha */
+}
+
+.project-card {
+  background-color: #252525;
+  padding: 20px;
+  border-radius: 8px;
+  width: calc(50% - 20px); /* Ajusta a largura para dois cards por linha */
+  box-sizing: border-box;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  max-height: 200px; /* Ajusta a altura máxima da imagem */
+  object-fit: cover; /* Garante que a imagem cubra o espaço sem distorção */
+  border-radius: 8px; /* Bordas arredondadas para a imagem */
+}
+
+.project-card h4 {
+  margin: 10px 0;
+}
+
+.project-card p {
+  padding: 0 10px;
+  margin-bottom: 10px;
+}
+
+.project-card:hover {
+  transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .project-card {
+    width: calc(100% - 20px); /* Ajusta a largura para um card por linha em telas menores */
+  }
+}
+
+/* Footer */
+footer {
+  background-color: #121212;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-links, .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-links a, .social-links a {
+  color: #34d399;
+  text-decoration: none;
+}
+
+.social-links img {
+  width: 24px;
+  height: 24px;
+}
