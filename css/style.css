@@ -58,10 +58,12 @@ nav ul li a {
 }
 
 .bio-text h3 {
-  color: #34d399;
   font-size: 50px;
   margin-top: 0px;
   margin-bottom: 0;
+  background: linear-gradient(135deg, #34d399, #3b82f6); /* Degrade em ângulo de 45 graus */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .bio-text p {
@@ -112,7 +114,9 @@ nav ul li a {
 }
 
 .connect h3 {
-  color: #34d399;
+  background: linear-gradient(150deg, #34d399, #3b82f6); /* Gradiente com ângulo de 45 graus */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-size: 24px;
   margin-bottom: 20px;
 }
@@ -141,7 +145,9 @@ nav ul li a {
 
 .education h2 {
   font-size: 36px;
-  color: #34d399;
+  background: linear-gradient(150deg, #34d399, #3b82f6); /* Gradiente com ângulo de 45 graus */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-bottom: 20px;
   text-align: center;
   width: 100%;
@@ -233,9 +239,12 @@ nav ul li a {
 
 .services h2 {
   font-size: 36px;
-  color: #34d399;
   margin-bottom: 20px;
+  background: linear-gradient(120deg, #34d399, #3b82f6); /* Gradiente com ângulo de 45 graus */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
+
 
 .card {
   background-color: #252525;
@@ -337,8 +346,11 @@ nav ul li a {
 
 .technologies h2 {
   font-size: 36px;
-  color: #34d399;
+  background: linear-gradient(135deg, #34d399, #3b82f6); /* Degrade em ângulo de 45 graus */
   margin-bottom: 20px;
+  margin-inline-end: 310px;
+  margin-inline-start: 310px;
+  border-radius: 7px;
 }
 
 .tech-lang-container {
@@ -405,9 +417,27 @@ nav ul li a {
 
 .projects h3 {
   font-size: 36px;
-  color: #34d399;
-  margin-bottom: 20px;
+  background: linear-gradient(60deg, #34d399, #3b82f6); /* Gradiente com ângulo de 45 graus */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;  margin-bottom: 20px;
   text-align: center;
+}
+.github-link {
+  margin-top: 10px;
+}
+
+.github-link .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.github-link .btn:hover {
+  background-color: #555;
 }
 
 /* Container for project cards */
@@ -422,7 +452,7 @@ nav ul li a {
   background-color: #252525;
   padding: 20px;
   border-radius: 8px;
-  width: calc(50% - 20px); /* Ajusta a largura para dois cards por linha */
+  width: calc(30% - 20px); /* Ajusta a largura para dois cards por linha */
   box-sizing: border-box;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
