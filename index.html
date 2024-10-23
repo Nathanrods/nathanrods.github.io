@@ -203,59 +203,28 @@
         </section>
 
         <!-- Seção de Contato -->
-        <section class="contact">
-            <h2>Contato</h2>
-            <form id="contactForm" action="https://formspree.io/f/mwpeepnq" method="POST">
-                <!-- Name input -->
-                <div class="form-floating mb-3">
-                    <input class="form-control" id="name" type="text" name="name" placeholder="Enter your name..." required />
-                    <label for="name">Nome Completo</label>
-                    <div class="invalid-feedback">Por favor, informe seu nome completo.</div>
-                </div>
-            
-                <!-- Email address input -->
-                <div class="form-floating mb-3">
-                    <input class="form-control" id="email" type="email" name="email" placeholder="name@example.com" required />
-                    <label for="email">Endereço de Email</label>
-                    <div class="invalid-feedback">Por favor, informe um e-mail válido.</div>
-                </div>
-            
-                <!-- Phone number input -->
-                <div class="form-floating mb-3">
-                    <input class="form-control" id="phone" type="tel" name="phone" placeholder="(123) 456-7890" />
-                    <label for="phone">Número de Telefone (opcional)</label>
-                    <div class="invalid-feedback">Por favor, informe um número de telefone válido.</div>
-                </div>
-            
-                <!-- Message input -->
-                <div class="form-floating mb-3">
-                    <textarea class="form-control" id="message" name="message" placeholder="Enter your message here..." style="height: 10rem" required></textarea>
-                    <label for="message">Mensagem</label>
-                    <div class="invalid-feedback">Por favor, informe sua mensagem.</div>
-                </div>
-            
-                <!-- Submit success message -->
-                <div class="d-none" id="submitSuccessMessage">
-                    <div class="text-center mb-3">
-                        <div class="fw-bolder">Sua mensagem foi enviada com sucesso!</div>
-                        <p>Obrigado pelo contato. Responderemos o mais breve possível.</p>
-                    </div>
-                </div>
-            
-                <!-- Submit error message -->
-                <div class="d-none" id="submitErrorMessage">
-                    <div class="text-center text-danger mb-3">Ocorreu um erro ao enviar sua mensagem.</div>
-                    <p>Por favor, tente novamente mais tarde.</p>
-                </div>
-            
-                <!-- Submit Button -->
-                <div class="d-grid">
-                    <button class="btn btn-primary btn-lg" id="submitButton" type="submit">Enviar</button>
-                </div>
-            </form>
-            
-            
-        </section>
+<section class="projects">
+    <div class="card text-center p-4">
+        <h3 class="card-title">Entre em Contato</h3>
+        <p class="card-text mt-3">
+            Adoraria conhecer você melhor e bater um papo sobre ideias ou negócios.
+            Se preferir, podemos conversar sobre projetos que você tem em mente.
+        </p>
+        <p class="mt-2">Entre em contato comigo por e-mail!</p>
+        
+        <!-- Botão de contato -->
+        <div class="email-link text-center">
+            <a href="mailto:nathanrod.ads@gmail.com?subject=Contato através do seu site" 
+               target="_blank" 
+               class="btn btn-primary btn-lg">
+                Enviar E-mail
+            </a>
+        </div>
+        
+        
+    </div>
+</section>
+
     </main>
 
     <footer>
@@ -271,51 +240,6 @@
         </div>
     </footer>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const form = document.getElementById('contactForm');
-            const submitButton = document.getElementById('submitButton');
-            const submitSuccessMessage = document.getElementById('submitSuccessMessage');
-            const submitErrorMessage = document.getElementById('submitErrorMessage');
-        
-            form.addEventListener('submit', async (event) => {
-                event.preventDefault(); // Impede o envio padrão do formulário
-        
-                // Mostra o botão de envio como desabilitado
-                submitButton.disabled = true;
-                submitButton.textContent = 'Enviando...';
-        
-                // Cria um objeto FormData com os dados do formulário
-                const formData = new FormData(form);
-        
-                try {
-                    // Envia a solicitação POST para o Formspree
-                    const response = await fetch(form.action, {
-                        method: 'POST',
-                        body: formData
-                    });
-        
-                    // Verifica se a resposta é bem-sucedida
-                    if (response.ok) {
-                        // Mostra a mensagem de sucesso e oculta as mensagens de erro
-                        submitSuccessMessage.classList.remove('d-none');
-                        submitErrorMessage.classList.add('d-none');
-                        form.reset(); // Reseta o formulário
-                    } else {
-                        // Se a resposta não for bem-sucedida, mostra a mensagem de erro
-                        submitSuccessMessage.classList.add('d-none');
-                        submitErrorMessage.classList.remove('d-none');
-                    }
-                } catch (error) {
-                    // Em caso de erro, mostra a mensagem de erro
-                    submitSuccessMessage.classList.add('d-none');
-                    submitErrorMessage.classList.remove('d-none');
-                } finally {
-                    // Restaura o botão de envio para seu estado original
-                    submitButton.disabled = false;
-                    submitButton.textContent = 'Enviar';
-                }
-            });
-        });
         </script>
         
 </body>

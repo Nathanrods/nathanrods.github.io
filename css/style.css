@@ -177,57 +177,55 @@ nav ul li a {
   text-align: left; /* Texto não centralizado */
   margin-top: 10px;
 }
-/* Seção de Contato */
 .contact {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.card {
   background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 8px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Centraliza o texto */
+  padding: 2rem; /* Adiciona um espaçamento interno */
+}
+
+.card-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem; /* Espaçamento abaixo do título */
+}
+
+.card-text {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 1rem; /* Espaçamento abaixo do texto */
+}
+
+.btn {
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 50px;
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 1rem;
+  }
+}
+/*email*/
+
+.email-link {
+  text-align: center; /* Centraliza o botão */
   margin-top: 20px;
 }
 
-.contact h2 {
-  text-align: center;
-  color: #333;
-}
-
-.contact form {
-  max-width: 600px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-}
-
-.contact label {
-  margin-bottom: 8px;
-  font-weight: bold;
-}
-
-.contact input, 
-.contact textarea {
-  padding: 10px;
-  margin-bottom: 12px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 1em;
-  width: 100%;
-}
-
-.contact textarea {
-  resize: vertical;
-}
-
-.contact button {
-  background-color: #5cb85c;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 1em;
-}
-
-.contact button:hover {
-  background-color: #4cae4c;
+.btn {
+  font-size: 1rem;
+  padding: 12px 24px;
+  border-radius: 50px;
+  text-decoration: none;
 }
 
 /* Cards */
@@ -440,6 +438,24 @@ nav ul li a {
   background-color: #555;
 }
 
+.email-link {
+  margin-top: 10px;
+}
+
+.email-link .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.email-link .btn:hover {
+  background-color: #555;
+}
+
 /* Container for project cards */
 .project-container {
   display: flex;
@@ -508,4 +524,123 @@ footer {
 .social-links img {
   width: 24px;
   height: 24px;
+}
+
+/* Responsividade para telas pequenas (celulares e tablets) */
+@media (max-width: 768px) {
+
+  /* Ajuste do header e navegação */
+  nav {
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+  }
+
+  nav h1 {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  nav ul {
+    align-items: center;
+    gap: 50px;
+    margin-inline-end: 0;
+    
+  }
+
+  nav ul li a {
+    font-size: 14px;
+  }
+
+  /* Ajuste da introdução */
+  .intro h2 {
+    font-size: 32px;
+    margin: 20px;
+  }
+
+  /* Bio e seção de conexão */
+  .bio-connect {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    margin: 20px;
+  }
+
+  .bio-text {
+    margin: 10px 50px;
+    margin-bottom: 40px;
+  }
+
+  .bio-text h3 {
+    font-size: 36px;
+  }
+
+  .connect {
+    margin: 20px 0;
+  }
+
+  .connect ul {
+    gap: 10px;
+  }
+
+  /* Educação e Cursos */
+  .education {
+    align-items: center;
+  }
+
+  .education .card {
+    width: 90%;
+  }
+
+  /* Serviços */
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .services h2 {
+    font-size: 28px;
+  }
+
+  .card {
+    width: 90%;
+    margin-inline: 0;
+  }
+
+  /* Seção de habilidades */
+  .skills-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .skills-group {
+    width: 90%;
+  }
+
+  /* Tecnologias */
+  .tech-lang-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .tech-lang-group {
+    width: 100%;
+  }
+
+  /* Contato */
+  .contact {
+    padding: 1rem;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+  }
+
+  .card-text {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+  }
 }
