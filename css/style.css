@@ -247,6 +247,7 @@ nav ul li a {
 .card {
   background-color: #252525;
   padding: 20px;
+  margin-bottom: 20px;
   border-radius: 8px;
   margin-inline: 15px;
   position: relative;
@@ -626,7 +627,21 @@ footer {
   .tech-lang-group {
     width: 100%;
   }
+  .technologies {
+    padding: 20px;
+  }
 
+  .technologies h2 {
+    font-size: 28px;
+    margin-inline: 0; /* Remove margens laterais */
+    padding: 10px;
+  }
+
+  .tech-lang-container {
+    flex-direction: column; /* Reorganiza em coluna */
+    max-width: 100%; /* Garante que ocupe toda a largura da tela */
+    gap: 15px;
+  }
   /* Contato */
   .contact {
     padding: 1rem;
